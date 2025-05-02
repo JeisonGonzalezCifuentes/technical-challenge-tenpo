@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: transactionsdb
+      POSTGRES_USER: jeison
+      POSTGRES_PASSWORD: secret123
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: ./backend
+    container_name: backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/transactionsdb
+      SPRING_DATASOURCE_USERNAME: jeison
+      SPRING_DATASOURCE_PASSWORD: secret123
+      SPRING_PROFILES_ACTIVE: dev
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
