@@ -44,7 +44,7 @@ Este proyecto está compuesto por un **microservicio** desarrollado en **Java Sp
 
 ### Paso 1: Clonar el repositorio
 
-Para clonar este repositorio después, incluyendo los submódulos:
+Para clonar este repositorio incluyendo los submódulos, puedes ejecutar el comando:
 
 ```git clone --recurse-submodules https://github.com/JeisonGonzalezCifuentes/technical-challenge-tenpo.git```
 
