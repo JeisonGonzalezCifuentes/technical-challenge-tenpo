@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/JeisonGonzalezCifuentes/transaction-api.git
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/JeisonGonzalezCifuentes/transactions-web.git
