@@ -1,6 +1,6 @@
 # Prueba técnica: Proyecto de Transacciones
 
-Este proyecto se presenta como solución al reto técnico full-stack propuesto por Tenpo. [Aquí](./challenge-fullstack-2025.pdf) se adjunta el documento con la descripción completa del reto completo.
+Este proyecto se presenta como solución al reto técnico full-stack propuesto por Tenpo. [Aquí](./challenge-fullstack-2025.pdf) se adjunta el documento con la descripción completa del reto.
 
 
 ## Componentes
