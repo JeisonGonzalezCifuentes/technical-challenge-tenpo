@@ -1,7 +1,6 @@
 # Prueba técnica: Proyecto de Transacciones
 
-Aplicación web con un frontend en React y un
-backend en Java con Spring Boot, siguiendo muy buenas prácticas de desarrollo de software. La aplicación se ejecuta dentro de contenedores Docker.
+Este proyecto se presenta como solución al reto técnico full-stack propuesto por Tenpo. [Aquí](./challenge-fullstack-2025.pdf) se adjunta el documento con la descripción completa del reto completo.
 
 
 ## Componentes
@@ -45,7 +44,11 @@ Este proyecto está compuesto por un **microservicio** desarrollado en **Java Sp
 
 ### Paso 1: Clonar el repositorio
 
-Clona este repositorio en tu máquina local:
+Para clonar este repositorio después, incluyendo los submódulos:
+
+```git clone --recurse-submodules https://github.com/JeisonGonzalezCifuentes/technical-challenge-tenpo.git```
+
+
 
 ### Paso 2: Construir y levantar los contenedores con Docker Compose
 Desde la raíz del proyecto (donde se encuentra el archivo docker-compose.yml), ejecuta:
@@ -54,7 +57,7 @@ Desde la raíz del proyecto (donde se encuentra el archivo docker-compose.yml), 
 
 Este comando realizará las siguientes acciones:
 
-- Construirá las imágenes Docker para los diferentes servicios servicios: base de datos,backend y frontend.
+- Construirá las imágenes Docker para los diferentes servicios: base de datos, backend y frontend.
 
 - Levantará los contenedores correspondientes y los expondrá en los puertos:
 
@@ -69,4 +72,4 @@ Accede al frontend en tu navegador en http://localhost:8081.
 
 ## Aclaración para validaciones de Rate Limiting
 
-Si bien el reto solicita **"Implementar un límite de 3 request por minuto por cliente para evitar abusos del sistema."**, el límite se aumentó a **100** para brindar una experiencia menos restrictiva y con el objetivo de presentar una demo fluida.
+Si bien el reto solicita **"Implementar un límite de 3 request por minuto por cliente para evitar abusos del sistema."**, el límite se aumentó a **100** para brindar una experiencia menos restrictiva y con el objetivo de presentar una demo fluida, este valor es completamente parametrizable en el ".properties" del micro servicio.
